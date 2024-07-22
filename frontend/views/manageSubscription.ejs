@@ -1,0 +1,32 @@
+<% layout('layout') %>
+<h1>Manage Subscriptions</h1>
+<ul>
+  <% subscriptions.forEach(subscription => { %>
+    <li>
+      Plan: <%= subscription.plan %> | Status: <%= subscription.status %>
+      <form action="/subscriptions/update" method="POST">
+        <input type="hidden" name="subscriptionId" value="<%= subscription._id %>">
+        <select name="newPlan">
+          <option value="basic">Basic</option>
+          <option value="premium">Premium</option>
+        </select>
+        <button type="submit">Update</button>
+      </form>
+      <form action="/subscriptions/cancel" method="POST">
+        <input type="hidden" name="subscriptionId" value="<%= subscription._id %>">
+        <button type="submit">Cancel</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
+<form action="/subscriptions/create" method="POST">
+  <h2>Create New Subscription</h2>
+  <label for="plan">Plan:</label>
+  <select name="plan">
+    <option value="basic">Basic</option>
+    <option value="premium">Premium</option>
+  </select>
+  <label for="paymentMethod">Payment Method:</label>
+  <input type="text" name="paymentMethod">
+  <button type="submit">Create</button>
+</form>

@@ -1,0 +1,181 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container for centering and spacing */
+.plans__container {
+    display: flex;
+    justify-content: center;
+    padding: 2em 1em;
+}
+
+.plans {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Hero section styling */
+.plansHero {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.plansHero__title {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.plansHero__subtitle {
+    font-size: 1.2em;
+    color: #777;
+}
+
+/* Plan items container */
+.planItem__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+/* Plan item styling */
+.planItem {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 2em);
+    margin: 1em;
+    padding: 1.5em;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.planItem:hover {
+    transform: scale(1.02);
+}
+
+/* Card styling */
+.card {
+    margin-bottom: 1em;
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card__icon {
+    width: 2.625rem; /* Adjusted to match original */
+    height: 2.625rem; /* Adjusted to match original */
+    border-radius: 50%;
+    background: #eee;
+    margin-bottom: 0.5em;
+}
+
+.card__desc {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Price styling */
+.price {
+    font-size: 2rem; /* Adjusted to match original */
+    font-weight: bold;
+    margin: 2rem 0; /* Adjusted to match original */
+}
+
+.price span {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Feature list styling */
+.featureList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2.75rem; /* Adjusted to match original */
+}
+
+.featureList li {
+    padding: 0.5em 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+}
+
+.featureList li.disabled {
+    color: #bbb;
+}
+
+/* Button styling */
+.button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease;
+    margin-top: auto; /* Ensures button is at the bottom */
+}
+
+.button:hover {
+    background: #555;
+}
+
+/* Specific button styles */
+.button--pink {
+    background: #ea4c89;
+}
+
+.button--pink:hover {
+    background: #d63384;
+}
+
+.button--white {
+    background: #fff;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.button--white:hover {
+    background: #f4f4f4;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 640px) {
+    .plans {
+        max-width: 480px;
+        width: 90%;
+    }
+
+    .planItem__container {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+    :root {
+        --baseSize: 12px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+    :root {
+        --baseSize: 14px;
+    }
+}
